@@ -3,9 +3,9 @@ var gracefulShutdown;
 //var dbURI = "mongodb://localhost/splitIT";
 var dbURI =
   "mongodb://heroku_vhm99n3z:71b7p932fpfphaslir4cn1eh6h@ds333098.mlab.com:33098/heroku_vhm99n3z";
-if (process.env.NODE_ENV === "production") {
-  dbURI = process.env.MONGOLAB_URI;
-}
+// if (process.env.NODE_ENV === "production") {
+//   dbURI = process.env.MONGOLAB_URI;
+// }
 
 mongoose.connect(dbURI, {
   useNewUrlParser: true,
