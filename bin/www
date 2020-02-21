@@ -5,6 +5,24 @@
  */
 
 var app = require("../app");
+//Adding body parser for handling request and response objects.
+app.use(
+  bodyParser.urlencoded({
+    extended: true
+  })
+);
+app.use(bodyParser.json());
+
+//Enabling CORS
+app.use(function(req, res, next) {
+  res.header("Access-Control-Allow-Origin", "*");
+  res.header(
+    "Access-Control-Allow-Headers",
+    "Origin, X-Requested-With, Content-Type, Accept"
+  );
+  next();
+});
+
 var debug = require("debug")("MEAN-stack-authentication:server");
 var http = require("http");
 
