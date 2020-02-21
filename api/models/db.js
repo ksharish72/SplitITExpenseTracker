@@ -17,7 +17,7 @@ mongoose.connection.on("error", function(err) {
   console.log("Mongoose connection error: " + err);
 });
 mongoose.connection.on("disconnected", function() {
-  console.log("Mongoose disconnected");
+  console.log("Mongoose disconnected check");
 });
 
 // CAPTURE APP TERMINATION / RESTART EVENTS
